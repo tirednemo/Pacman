@@ -19,7 +19,6 @@ import time
 import sys
 import json
 import traceback
-import pdb
 from collections import defaultdict
 import util
 

@@ -195,10 +195,10 @@ def printTest(testDict, solutionDict):
     pp = pprint.PrettyPrinter(indent=4)
     print("Test case:")
     for line in testDict["__raw_lines__"]:
-        print("   |", line)
+        print(("   |", line))
     print("Solution:")
     for line in solutionDict["__raw_lines__"]:
-        print("   |", line)
+        print(("   |", line))
 
 
 def runTest(testName, moduleDict, printTestCase=False, display=None):
@@ -244,8 +244,8 @@ def getTestSubdirs(testParser, testRoot, questionToGrade):
     if questionToGrade != None:
         questions = getDepends(testParser, testRoot, questionToGrade)
         if len(questions) > 1:
-            print('Note: due to dependencies, the following tests will be run: %s' %
-                  ' '.join(questions))
+            print(('Note: due to dependencies, the following tests will be run: %s' %
+                  ' '.join(questions)))
         return questions
     if 'order' in problemDict:
         return problemDict['order'].split()
